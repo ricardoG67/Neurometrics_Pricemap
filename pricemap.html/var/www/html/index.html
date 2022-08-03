@@ -1,0 +1,527 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Pricemap</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        <meta property="og:site_name" content="Pricemap">
+        <meta property="og:title" content="Observatorio de precios">
+        <meta property="og:image" content="assets/img/logo/pricemap_logo_v1.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:description" content="Encuentra y compara el precio del mismo producto en diferentes puntos de venta.">
+        <meta property="og:url" content="http://pricemap.neurometrics.la/">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link rel="manifest" href="site.webmanifest">
+     
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon_pricemap.png">
+       
+        
+		<!-- CSS here -->
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="assets/css/flaticon.css">
+            <link rel="stylesheet" href="assets/css/slicknav.css">
+            <link rel="stylesheet" href="assets/css/animate.min.css">
+            <link rel="stylesheet" href="assets/css/magnific-popup.css">
+            <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="assets/css/themify-icons.css">
+            <link rel="stylesheet" href="assets/css/slick.css">
+            <link rel="stylesheet" href="assets/css/nice-select.css">
+            <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Plotly -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        
+        <style>
+            .filterDiv {                    
+            display: none;        
+            }           
+
+            /* The "show" class is added to the filtered elements */
+            .show {
+            display: block;
+            }
+
+            /* Style the buttons */
+            .btn {
+            border: none;
+            outline: none;
+            padding: 20px 20px;
+            background-color:white;
+            color: #8590A0;            
+            cursor: pointer;
+            border: 5px solid #F2F2F6;          
+            }
+
+            /* Add a light grey background on mouse-over */
+            .btn:hover {
+            background-color: #4c98f2;
+            background: #4c98f2;
+            color: white;
+            border: 5px solid #4c98f2;
+            }
+
+            /* Add a dark background to the active button */
+            .btn.active {
+            background-color: #4c98f2;
+            color: white;
+            border: 5px solid #4c98f2;
+            }
+            .btn::before{
+                background: #4c98f2;
+                color: white;
+                border: 5px solid #4c98f2;
+            }
+        </style>         
+   </head>
+
+   <body>
+       
+    <!-- Preloader Start -->
+    
+    <!-- <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img height="50" width="100" src="assets/img/logo/pricemap_logo.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div> -->
+   
+    <!-- Preloader Start -->
+
+    <header>
+        <!-- Header Start -->
+       <div class="header-area header-transparrent">
+            <div class="main-header header-sticky">
+                <div class="container">
+                    <div class="row align-items-center" style="padding-top: 15px;">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-2">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/pricemap_logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <!-- Main-menu --> 
+
+                            <!---->                          
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">                                                                                                
+                    
+                                        <li><a href="#observatorio">Comparación</a></li>                                    
+                                        <li><a href="#contact">Contacto</a></li>
+                                        <li><a href="https://pixmap.io/" target="_blank">Pixmap</a></li>
+
+                                        <!--
+                                        <li><a href="#">Users</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">Blog</a></li>
+                                                <li><a href="single-blog.html">Blog Details</a></li>
+                                                <li><a href="elements.html">Element</a></li>
+                                            </ul>
+                                        </li> 
+                                        -->                                       
+
+                                    </ul>
+                                </nav>
+                            </div>                          
+
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header>
+
+    <main>
+
+        <!-- Slider Area Start-->
+        <div class="slider-area">
+            <div class="slider-active">
+                <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
+                    <div class="container">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-6 col-md-9 ">
+                                <div class="hero__caption">
+                                    <span data-animation="fadeInUp" data-delay=".4s"><button style="background-color:#e24d42; border: none; font-size: 12px; padding: 6px 12px; padding: 10px 15px;">E-COMMERCE</button></span>
+                                    <h1 data-animation="fadeInUp" data-delay=".6s">Observatorio de <br> precios</h1>
+                                    <p data-animation="fadeInUp" data-delay=".8s">Compara el precio del mismo producto en diferentes puntos de <u style="color: #707b8e">venta online</u> y obtén métricas clave para tomar mejores decisiones.</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-lg-6 ">
+                                <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight" data-delay="1s">
+                                    <img src="assets/img/gallery/pricemap_landing.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+        </div>
+        
+        <!-- Slider Area End -->
+        
+        <!-- Observatorio Start-->
+        <section id="observatorio" class="service-area section-padding2">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section-tittle text-center">
+                            <h2>Comparación de precios</h2>
+                        </div>
+                    </div>
+                </div>
+              
+
+                <!-- Control buttons -->
+                <div id="myBtnContainer" style="text-align: center;">
+                    <button class="btn active" onclick="filterSelection('all')">Todos</button>                                  
+                    <button class="btn" onclick="filterSelection('abarrotes')">Abarrotes</button> 
+                    <button class="btn" onclick="filterSelection('gaseosas')">Gaseosas</button>                  
+                    <button class="btn" onclick="filterSelection('lacteos')">Lácteos</button>                    
+                    <button class="btn" onclick="filterSelection('licores')">Licores</button>
+                    <button class="btn" onclick="filterSelection('tecnologia')">Tecnología</button>
+                    <!-- <button class="btn" onclick="filterSelection('navidad')">Navidad</button>                    -->
+                </div>
+
+                <br></br>
+
+                <div class="row d-flex justify-content-center">      
+                   
+                   
+                    <!-- <iframe class="filterDiv gaseosas" width="400" height="350" frameborder="0" scrolling="no" src="graphics/sprite_500ml.html"></iframe>
+                    <iframe class="filterDiv gaseosas" width="400" height="350" frameborder="0" scrolling="no" src="graphics/coca_cola_500ml.html"></iframe>
+                    <iframe class="filterDiv gaseosas" width="400" height="350" frameborder="0" scrolling="no" src="graphics/inka_cola_500ml.html"></iframe>
+                    <iframe class="filterDiv gaseosas" width="400" height="350" frameborder="0" scrolling="no" src="graphics/pepsi_500ml.html"></iframe>
+
+                  
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/ajinomoto_500gr.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/aceite_primor_clasico.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/arroz_extra_costeno_bolsa_5kg.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/pan_de_molde_blanco_bimbo_500gr.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/huevos_pardos_15_unid_marca_propia.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/arroz_extra_costenio_750gr.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/filete_de_pechuga_de_pollo_1kg.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/manza_roja_importada_1kg.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/tomate_1kg_marca_propia.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/azucar_rubia_1kg_marca_propia.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/lenteja_costeño_1kg.html"></iframe>
+                    <iframe class="filterDiv abarrotes" width="400" height="350" frameborder="0" scrolling="no" src="graphics/spaghetti_don_vittorio_500gr.html"></iframe>
+
+                   
+                    <iframe class="filterDiv lacteos" width="400" height="350" frameborder="0" scrolling="no" src="graphics/leche_evaporada_entera_gloria_lata_500gr.html"></iframe>
+                    <iframe class="filterDiv lacteos" width="400" height="350" frameborder="0" scrolling="no" src="graphics/queso_edam_braedt_paquete_200gr.html"></iframe>
+                    <iframe class="filterDiv lacteos" width="400" height="350" frameborder="0" scrolling="no" src="graphics/yogurt_fresa_gloria_1kg.html"></iframe>
+                    <iframe class="filterDiv lacteos" width="400" height="350" frameborder="0" scrolling="no" src="graphics/mantequilla_laive_pote_200gr.html"></iframe>
+
+                  
+                    <iframe class="filterDiv licores" width="400" height="350" frameborder="0" scrolling="no" src="graphics/whisky_johnnie_walker_red_label_1l.html"></iframe>
+
+                   
+                    <iframe class="filterDiv tecnologia" width="400" height="350" frameborder="0" scrolling="no" src="graphics/televisor_lg_nanocell_49.html"></iframe>
+                    <iframe class="filterDiv tecnologia" width="400" height="350" frameborder="0" scrolling="no" src="graphics/impresora_multifuncional_hp_315.html"></iframe>
+
+                   
+                    <iframe class="filterDiv navidad" width="400" height="350" frameborder="0" scrolling="no" src="graphics/paneton_donofrio_caja_900g.html"></iframe>
+                    <iframe class="filterDiv navidad" width="400" height="350" frameborder="0" scrolling="no" src="graphics/paneton_todinno_caja_900g.html"></iframe>
+                    <iframe class="filterDiv navidad" width="400" height="350" frameborder="0" scrolling="no" src="graphics/paneton_donofrio_tradicional_bolsa_900g.html"></iframe>
+                    <iframe class="filterDiv navidad" width="400" height="350" frameborder="0" scrolling="no" src="graphics/paneton_gloria_bolsa_900g.html"></iframe>
+                    <iframe class="filterDiv navidad" width="400" height="350" frameborder="0" scrolling="no" src="graphics/tableta_sol_del_cusco_clavo_canela_90g.html"></iframe>
+                    <iframe class="filterDiv navidad" width="400" height="350" frameborder="0" scrolling="no" src="graphics/tableta_sol_del_cusco_chocolate_tradicional_90g.html"></iframe> -->
+
+
+                    <div class="filterDiv gaseosas">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/140.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv gaseosas">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/142.embed?showlink=false"></iframe>
+                    </div>
+                    <!-- <div class="filterDiv gaseosas">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/144.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv gaseosas">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1.embed?showlink=false"></iframe>
+                    </div> -->
+
+
+                                     
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/10.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/150.embed?showlink=false"></iframe>
+                    </div>
+                    <!-- <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/152.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/154.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/156.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/158.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/160.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/162.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/164.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/3.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/5.embed?showlink=false"></iframe> 
+                    </div>
+                    <div class="filterDiv abarrotes">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/146.embed?showlink=false"></iframe>
+                    </div> -->
+
+
+
+                    <div class="filterDiv licores">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/12.embed?showlink=false"></iframe>
+                    </div>                   
+
+                    
+                                
+                    <div class="filterDiv lacteos">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/166.embed?showlink=false"></iframe>
+                    </div>                    
+                    <div class="filterDiv lacteos">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/170.embed?showlink=false"></iframe>
+                    </div>
+                    <!-- <div class="filterDiv lacteos">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/168.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv lacteos">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/148.embed?showlink=false"></iframe>
+                    </div> -->
+
+
+
+                    <div class="filterDiv tecnologia">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/172.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv tecnologia">
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/8.embed?showlink=false"></iframe>
+                    </div>
+
+
+                    
+                    <!--
+                    <div class="filterDiv navidad">                        
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1169.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv navidad">                        
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1171.embed?showlink=false"></iframe>
+                    </div>                    
+                    <div class="filterDiv navidad">                        
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1173.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv navidad">                        
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1175.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv navidad">                        
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1177.embed?showlink=false"></iframe>
+                    </div>
+                    <div class="filterDiv navidad">                        
+                        <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1179.embed?showlink=false"></iframe>
+                    </div> -->
+
+
+                </div>               
+                <!--
+                <div class="row d-flex justify-content-center">  
+                    <div class="row">           
+                        <div class="column">
+                            <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/1.embed?showlink=false"></iframe>
+                            <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/3.embed?showlink=false"></iframe>
+                            <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/5.embed?showlink=false"></iframe>                            
+                        </div>
+                    </div>            
+                    <div class="row"> 
+                        <div class="column">
+                            <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/8.embed?showlink=false"></iframe>
+                            <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/10.embed?showlink=false"></iframe>
+                            <iframe width="400" height="350" frameborder="0" scrolling="no" src="//plotly.com/~neisserBOT/12.embed?showlink=false"></iframe>
+                        </div>
+                    </div>                
+                </div>
+                -->
+
+                <script>
+                    filterSelection("all")
+                    function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("filterDiv");
+                    if (c == "all") c = "";
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    }
+                    }
+
+                    function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                    }
+                    var iframe = document.createElement('iframe');
+                    iframe.style.display = "none";
+                    iframe.src = "assets/img/gallery/logo.png";
+                    document.body.appendChild(iframe);
+
+                    }
+
+                    function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                        }
+                    }
+                    element.className = arr1.join(" ");
+                    }
+
+                    // Add active class to the current button (highlight it)
+                    var btnContainer = document.getElementById("myBtnContainer");
+                    var btns = btnContainer.getElementsByClassName("btn");
+                    for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function(){
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                    });
+                    }
+
+                </script>
+                
+            </div>         
+        </section>
+        <!-- Observatorio End -->
+        
+        
+        <!-- Say Something Start -->
+        <div class="say-something-aera pt-90 pb-90 fix sky-blue">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="say-shape">
+                        <!--<img src="assets/img/shape/say-shape-left.png" alt="" class="say-shape1 rotateme d-none d-xl-block">-->
+                        <img src="assets/img/shape/say-shape-right.png" alt="Snow" class="say-shape2 d-none d-lg-block">
+                                                 
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="say-something-cap" style="position: relative;">
+                            <h2>¿Te gustaría contar con <br> Pricemap para los productos <br> de tu empresa?</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div style="background-color: #ffffff; padding: 50px; border-radius: 30px; position: relative;">                                                                 
+                            <p style="font-size: 17px;">Contáctanos <br> +51 (1) 7772037 <br> proyectos@neurometrics.la</p>                                                          
+                        </div>
+                    </div>
+                                     
+                </div>
+            </div>
+            
+            
+        </div>     
+        <!-- Say Something End -->
+
+    </main>
+
+   <footer id="contact">
+       <!-- Footer Start-->
+      <div class="footer-main">
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row  justify-content-between">
+                    <div class="col-lg-8">
+                         <div class="single-footer-caption mb-30">
+                              <!-- logo -->
+                             <div class="footer-logo">
+                                 <a href="index.html"><img src="assets/img/logo/pricemap_logo.png" alt=""></a>                              
+                             </div>
+                             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                &copy;<script>document.write(new Date().getFullYear());</script> <a style="color:#1064dd;" href="https://neurometrics.la/" target="_blank">Neurometrics</a> | Av. Mariscal La Mar 550, Of.406 Miraflores, Lima
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                                                                                   
+                         </div>
+                    </div>   
+                </div>            
+            </div>            
+        </div>       
+                
+      </div>     
+       <!-- Footer End-->
+
+   </footer>    
+   
+    <!-- JS here -->
+        <!-- Important!!! In order to allow your videoask to open up on the same page when interacting with the widget, your website must use the secure https:// protocol (i.e have an SSL certificate). Otherwise, when clicking the widget, a new tab will be automatically opened in the browser.
+        -->              
+    
+		<!-- All JS Custom Plugins Link Here here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+		
+		<!-- Jquery, Popper, Bootstrap -->
+		<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+	    <!-- Jquery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+		<!-- Jquery Slick , Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- Date Picker -->
+        <script src="./assets/js/gijgo.min.js"></script>
+		<!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+		<script src="./assets/js/animated.headline.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+		<!-- Scrollup, nice-select, sticky -->
+        <script src="./assets/js/jquery.scrollUp.min.js"></script>
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+		<script src="./assets/js/jquery.sticky.js"></script>
+        
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        
+		<!-- Jquery Plugins, main Jquery -->	
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
+        
+    </body>
+</html>
